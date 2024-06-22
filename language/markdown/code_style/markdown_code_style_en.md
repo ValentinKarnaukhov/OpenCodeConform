@@ -1,3 +1,3 @@
 # Markdown Style Guidelines
 
-We are really looking for somebody who knows best practices of markdown. Also okay to find information in the internet and put it here with proper structure.
+We are looking for contributors with CSS skills to write style guide for Markdown. For contribution use [this issue]()

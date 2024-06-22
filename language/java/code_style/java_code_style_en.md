@@ -1,4 +1,4 @@
-# Java Code Style Guidelines
+# Java Style Guidelines
 
 
 
