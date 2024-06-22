@@ -1,6 +1,6 @@
 # Java Code Style Guidelines
 
----
+
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@
   - [Column limit](#column-limit)
   - [Line-wrapping](#line-wrapping)
 
----
+
 
 ## <a name="terminology"></a> Terminology
 
@@ -23,7 +23,7 @@
 - The term _member_ (of a class) is used inclusively to mean a nested class, field, method, or constructor; that is, all top-level contents of a class except initializers and comments.
 - _block-like_ construct refers to the body of a class, method or constructor.
 
----
+
 
 ## <a name="source-file-structure"></a> Source file structure
 
@@ -35,13 +35,13 @@ A source file consists of, **in order**:
 
 Exactly one blank line separates each section that is present.
 
----
+
 
 ### <a name="package-statement"></a> Package statement
 
 - The package statement is not line-wrapped. The column limit does not apply to package statements.
 
----
+
 
 ### <a name="import-statements"></a> Import statements
 
@@ -56,7 +56,7 @@ If there are both static and non-static imports, a single blank line separates t
 
 Static import is not used for static nested classes. They are imported with normal imports.
 
----
+
 
 ### <a name="class-declaration"></a> Class declaration
 
@@ -65,11 +65,11 @@ Static import is not used for static nested classes. They are imported with norm
 - What is important is that each class uses some **logical order**, which its maintainer could explain if asked. For example, new methods are not just habitually added to the end of the class, as that would yield "chronological by date added" ordering, which is not a logical ordering.
 - Methods of a class that share the same name appear in a single contiguous group with no other members in between. The same applies to multiple constructors (which always have the same name).
 
----
+
 
 ## <a name="formatting"></a> Formatting
 
----
+
 
 ### <a name="braces"></a> Braces
 
@@ -84,13 +84,11 @@ Braces follow the [Kernighan and Ritchie style](https://en.wikipedia.org/wiki/In
 
 Empty blocks may be concise. It may be closed immediately after it is opened, with no characters or line break in between (`{}`), unless it is part of a multi-block statement (one that directly contains multiple blocks: `if/else` or `try/catch/finally`).
 
----
+
 
 ### <a name="block-indentation"></a> Block indentation
 
 
-
----
 
 ### <a name="column-limit"></a> Column limit
 ### <a name="line-wrapping"></a> Line-wrapping
