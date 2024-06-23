@@ -43,12 +43,14 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, Svg, description}: FeatureItem) {
     return (
-        <div className={clsx('col col--4')}>
+        <div className={clsx('col col--5', styles.featureItem)}>
             <div className="text--center">
                 {/*<Svg className={styles.featureSvg} role="img" />*/}
             </div>
-            <div className="text--center padding-horiz--md">
+            <div className="text--center">
                 <Heading as="h3">{title}</Heading>
+            </div>
+            <div className="left padding-horiz--md">
                 <p>{description}</p>
             </div>
         </div>
