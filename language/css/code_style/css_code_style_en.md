@@ -48,7 +48,7 @@ color: blue;
 ### Spacing and Empty Lines 
 Adding appropriate spacing can make code easy to read. It is recommended to add a space after each colon `:` in property declaration and after every comma `,` in property value.
 
-Use empty lines to seperate different CSS rulesets. This keeps the code consistent and easy to read.
+Use empty lines to seperate different CSS rulesets and seperate properties whenever necessary. This keeps the code consistent and easy to read.
 
 Do this
 ```css
@@ -142,13 +142,14 @@ Instead of this
 }
 ```
 
-## Naming Conventions 
-### Use of kebab-case
+## Naming Conventions
 In CSS, every CSS property follows [kebab-case](https://developer.mozilla.org/en-US/docs/Glossary/Kebab_case) (sometimes referred to as hyphenated). Therefore it is common practice to name variables (also applicable to class names and id names) using kebab-case as it maintains consistency. Avoid use of multiple variable naming convention.
 
 When declaring CSS variables, the variable name should always start with `--` if it is a global variable which are commonly declared in `:root`.
 
 But in case of a local variable (variable declared in another element) its name should start with `--_`. The underscore in the name indicates that the variable is a local variable.
+
+Make sure the variable names are concise and indicate their purpose and use case.
 
 Do this 
 ```css
@@ -157,12 +158,16 @@ Do this
   --primary-color: blue;
 }
 
-.my-class, 
+#my-div, 
 .red, 
 .size-big {
   --_size-big: 20px;
   font-size: var(--_size-big);
   background-color: red;
+}
+
+.lightblue {
+  color: lightblue;
 }
 ```
 
@@ -173,25 +178,126 @@ Instead of
   --primary_color: blue;
 }
 
-.myClass,
+#myDiv,
 .RED,
 .size_big {
   --sizeBig: 20px;
   font-size: var(--sizeBig);
   background-color: red;
 }
+
+.blue {
+  color: lightblue;
+}
 ```
 
+## Code Structure
+### Organization of Files and Directories 
+Organizing CSS files can be very difficult, therefore it is best to create seperate CSS files based on layouts and use case. It is also best practice to have a different CSS file for every HTML file.
 
+Example:
 
+```css
+css/
+  global.css
+  docs.css
+  components/
+    forms.css
+    cards.css
+    buttons.css
+  layout/
+    grid.css
+    header.css
+    footer.css
+  theme/
+    light-theme.css
+    dark-theme.css
+```
 
+### Order of Properties 
+Grouping logical properties by using empty lines can make code easier to understand.
 
+Example:
+```css
+.box::before {
+  content: '';
 
+  position: absolute;
+  top: 0;
+  left: 0;
 
+  display: block;
+  aspect-ratio: 16 / 9;
+  width: 200px;
+  margin: 2rem auto;
+  padding: 0;
 
+  border: 2px solid black;
+  box-shadow: 0 0 20px 5px #000;
+  background: linear-gradient(
+    to right,
+    red,
+    blue
+  );
 
+  transition: transform ease 1s
+  animation: rotate infinite ease 10s;
+}
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
 
+  50% {
+    transform: rotate(180deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+```
+
+## Comments
+### When to Comment?
+1. When a part of a code is difficult to understand, complicated or needs context.
+
+Example
+```css
+/* screen width <= 800px */
+/* Phones, Large Phones and Tablets */
+@media (max-width: 800px) {
+  ...
+}
+```
+
+2. To seperate sections in a CSS file.
+   
+Example:
+```css
+/* Variables */
+:root {
+  ...
+}
+
+/* Base changes */
+body {
+  ...
+}
+
+/* Navbar */
+nav {
+  ...
+}
+
+/* Footer */
+footer {
+  ...
+}
+```
+
+Try not to add too many comments and stick with simple and intuitive solutions.
 
 
 
