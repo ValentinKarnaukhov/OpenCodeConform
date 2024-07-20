@@ -74,7 +74,7 @@ Instead of this
   filter:brightness(3.0),sepia(0.25),saturate(0.75);
 }
 .coolest-class {
-  transform: rotate(360deg),scale(1.00);
+  transform:rotate(360deg),scale(1.00);
 }
 ```
 
@@ -311,8 +311,133 @@ Example:
 
 /* This is a multiline comment
  * This comment spans multiple lines
- * Only use such comments when absolutely necessary 
  */
 ```
+
+## Typical Errors & How to avoid them 
+1. Using overly specific selectors
+Use simple and more maintainable selectors. Avoid unnecessary specificity.
+
+Avoid this
+```css
+nav > ul.menu > li > a {
+  text-decoration: none;
+}
+```
+
+Do this instead 
+```css
+nav a {
+  text-decoration: none;
+}
+```
+
+2. Using IDs for styling
+Using classes for styling is much more convenient as multiple elements can have the same class. It allows for flexibility and reusability.
+
+Avoid this
+```css
+#blue {
+  color: blue;
+}
+```
+
+Do this
+```css
+.blue {
+  color: blue;
+}
+```
+
+3. Not using short hand properties
+Using short hand properties reduces the amount of code and makes it readable.
+
+Avoid this
+```css
+.my-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+```
+
+Do this
+```css
+.my-wrapper {
+  margin: 15px 20px;
+}
+```
+
+4. Using `!important`
+Overusing `!important` can make the code hard to maintain and override. Only use it when absolutely necessary.
+
+Avoid this 
+```css
+.red {
+  color: red !important;
+}
+```
+
+Do this 
+```css
+.red {
+  color: red !important;
+}
+```
+
+5. Not resetting or incorrectly resetting CSS
+Resetting CSS is important because different browser have different default styles. Using a proper CSS reset ensures consistency across browsers. Avoid unnecessary resets.
+
+Avoid this
+```css
+div {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+```
+
+Do this
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+6. Overusing Universal Selector
+Overusing universal selector can cause massive performance issues. It is best to apply some styles to specific elements.
+
+Avoid this
+```css
+* {
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+```
+
+Do this
+```css
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+```
+
+7. Not using browser prefixes
+Including prefixes for CSS3 properties 
+
+
+
+
 
 
