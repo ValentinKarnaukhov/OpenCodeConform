@@ -315,7 +315,25 @@ Example:
 ```
 
 ## Typical Errors & How to avoid them 
-1. Using overly specific selectors
+### Using inline styles
+Using inline styles makes your code messier. It is always better to keep your CSS centralised and not spread out. Not using inline styles keeps the HTML clean.
+
+Avoid this
+```html
+<div style="color: red; font-size: 20px;">Hello World</div>
+```
+
+Do this
+```html
+<div class="red">Hello World</div>
+```
+```css
+.red {
+  color: red;
+}
+```
+
+### Using overly specific selectors
 Use simple and more maintainable selectors. Avoid unnecessary specificity.
 
 Avoid this
@@ -332,7 +350,7 @@ nav a {
 }
 ```
 
-2. Using IDs for styling
+### Using IDs for styling
 Using classes for styling is much more convenient as multiple elements can have the same class. It allows for flexibility and reusability.
 
 Avoid this
@@ -349,27 +367,7 @@ Do this
 }
 ```
 
-3. Not using short hand properties
-Using short hand properties reduces the amount of code and makes it readable.
-
-Avoid this
-```css
-.my-wrapper {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-```
-
-Do this
-```css
-.my-wrapper {
-  margin: 15px 20px;
-}
-```
-
-4. Using `!important`
+### Using `!important`
 Overusing `!important` can make the code hard to maintain and override. Only use it when absolutely necessary.
 
 Avoid this 
@@ -386,28 +384,7 @@ Do this
 }
 ```
 
-5. Not resetting or incorrectly resetting CSS
-Resetting CSS is important because different browser have different default styles. Using a proper CSS reset ensures consistency across browsers. Avoid unnecessary resets.
-
-Avoid this
-```css
-div {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-```
-
-Do this
-```css
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-```
-
-6. Overusing Universal Selector
+### Overusing Universal Selector
 Overusing universal selector can cause massive performance issues. It is best to apply some styles to specific elements.
 
 Avoid this
@@ -433,11 +410,40 @@ body {
 }
 ```
 
-7. Not using browser prefixes
-Including prefixes for CSS3 properties 
+## Best Practices 
+### Using browser prefixes
+Using browser prefixes allow for cross-browser compatibility, especially for old browsers. Browser prefixes are also called [vendor prefixes](http://web.simmons.edu/~grovesd/comm244/notes/week6/css3-compatibility).
 
+Example:
+```css
+.cool-box {
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+```
 
+### Resetting CSS
+Resetting CSS is important because different browser have different default styles. Using a proper CSS reset ensures consistency across browsers. Try to avoid unnecessary resets.
 
+Example:
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
 
+### Using short hand properties
+Using short hand properties reduces the amount of code and makes the code more readable.
 
-
+Example:
+```css
+.my-wrapper {
+  margin: 15px 20px;
+  padding: 10px 200px 20px 5px;
+}
+```
