@@ -3,7 +3,7 @@ This is a guideline which lists best practices and principles that should be fol
 
 ## Code Formatting 
 ### Property Declaration 
-Each property must be decleared on a new line. This makes the code readable and consistent.
+Each property must be declared on a new line. This makes the code readable and consistent.
 
 Every property declaration must end with a semicolon even if it is the last declaration in a CSS ruleset.
 
@@ -48,7 +48,7 @@ color: blue;
 ### Spacing and Empty Lines 
 Adding appropriate spacing can make code easy to read. It is recommended to add a space after each colon `:` in property declaration and after every comma `,` in property value.
 
-Use empty lines to seperate different CSS rulesets and seperate properties whenever necessary. This keeps the code consistent and easy to read.
+Use empty lines to separate different CSS rulesets and separate properties whenever necessary. This keeps the code consistent and easy to read.
 
 Do this
 ```css
@@ -193,7 +193,7 @@ Instead of
 
 ## Code Structure
 ### Organization of Files and Directories 
-Organizing CSS files can be very difficult, therefore it is best to create seperate CSS files based on layouts and use case. It is also best practice to have a different CSS file for every HTML file.
+Organizing CSS files can be very difficult, therefore it is best to create separate CSS files based on layouts and use case. It is also best practice to have a different CSS file for every HTML file.
 
 Example:
 
@@ -215,7 +215,7 @@ css/
 ```
 
 ### Order of Properties 
-Grouping logical properties by using empty lines can make code easier to understand.
+Grouping related properties by using empty lines can make code easier to understand.
 
 Example:
 ```css
@@ -240,7 +240,7 @@ Example:
     blue
   );
 
-  transition: transform ease 1s
+  transition: transform ease 1s;
   animation: rotate infinite ease 10s;
 }
 
@@ -272,7 +272,7 @@ Example
 }
 ```
 
-2. To seperate sections in a CSS file.
+2. To separate sections in a CSS file.
    
 Example:
 ```css
