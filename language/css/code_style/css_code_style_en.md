@@ -243,20 +243,6 @@ Example:
   transition: transform ease 1s;
   animation: rotate infinite ease 10s;
 }
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg)
-  }
-
-  50% {
-    transform: rotate(180deg)
-  }
-
-  100% {
-    transform: rotate(360deg)
-  }
-}
 ```
 
 ## Comments
