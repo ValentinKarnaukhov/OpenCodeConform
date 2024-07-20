@@ -1,5 +1,5 @@
 # CSS Style Guidelines
-This file lists some best practices and principles that should be followed when writing CSS.
+This is a guideline which lists best practices and principles that should be followed when writing CSS.
 
 ## Code Formatting 
 ### Property Declaration 
@@ -297,10 +297,22 @@ footer {
 }
 ```
 
-Try not to add too many comments and stick with simple and intuitive solutions.
+### How to Comment
+1. Only use comments when necessary.
+2. Be concise and avoid long comments.
+3. Update comments from time to time.
+4. Make sure that they have a purpose and reflect their intended meaning.
+5. Use single line comments for short descriptive purposes.
+6. Use multiline comments for writing long comments.
 
+Example:
+```css
+/* This is a single line comment */
 
-
-
+/* This is a multiline comment
+ * This comment spans multiple lines
+ * Only use such comments when absolutely necessary 
+ */
+```
 
 
