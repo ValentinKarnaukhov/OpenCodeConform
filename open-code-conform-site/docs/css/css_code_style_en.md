@@ -1,4 +1,7 @@
 # CSS Style Guidelines
+
+_Author_: [Programmer80101](https://github.com/Programmer80101)
+
 This is a guideline which lists best practices and principles that should be followed when writing CSS.
 
 ## Code Formatting 
