@@ -1,0 +1,3 @@
+run build.py file
+npm run build
+npm run deploy
